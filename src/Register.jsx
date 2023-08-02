@@ -12,7 +12,10 @@ import {
 }from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useNavigate } from 'react-router-dom';
 function Register() {
+    const navigate = useNavigate();
+    const clicklogin =()=> navigate('/');
   return (
     <>
 <MDBContainer fluid>
@@ -44,11 +47,11 @@ function Register() {
               </div>
 
               <div className='mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' /> 
               </div>
 
               <MDBBtn className='mb-4' size='lg'>Register</MDBBtn>
-
+              <p>Come Back <a href='' onClick={clicklogin}>Login</a></p>
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
